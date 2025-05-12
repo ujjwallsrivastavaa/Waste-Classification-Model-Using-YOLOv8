@@ -6,7 +6,7 @@ import pickle
 import settings
 
 #loaded_model=pickle.load(open('C:/Users/MY PC/Desktop/yolov8/yolov8-streamlit-detection-tracking/weights/yolov8.pkl', 'rb'))
-with open('C:/Users/asus/OneDrive/Desktop/Waste Classification/Waste-Classification-Model-Using-YOLOv8/weights/yolov8 (1).pkl', 'rb') as file:
+with open('weights/yolov8 (1).pkl', 'rb') as file:
     model1= pickle.load(file)
 
 
@@ -21,7 +21,7 @@ def load_model(model_path):
     Returns:
         A YOLO object detection model.
     """
-    model = YOLO('C:/Users/asus/OneDrive/Desktop/Waste Classification/Waste-Classification-Model-Using-YOLOv8/weights/yoloooo.pt')
+    model = YOLO('weights/yoloooo.pt')
     return model
 
 
@@ -64,7 +64,7 @@ def _display_detected_frames(conf, model, st_frame, image, is_display_tracking=N
     st_frame.image(res_plotted,
                    caption='Detected Video',
                    channels="BGR",
-                   use_column_width=True
+                  use_container_width=True
                    )
 
 
